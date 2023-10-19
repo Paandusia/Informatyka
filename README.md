@@ -1,2 +1,2 @@
 # Informatyka
-Nina Kędzierska
+**Nina Kędzierska**
