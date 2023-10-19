@@ -1,3 +1,3 @@
 # Informatyka
 **Nina Kędzierska**
-Kocham kotki  
+Kocham kotki \
