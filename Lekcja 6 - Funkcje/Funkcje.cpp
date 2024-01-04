@@ -16,5 +16,4 @@ int main (){
 
 void Przywitanie(string imie, string nazwisko){
 	cout << "Witaj " << imie << " " << nazwisko;
-
 }
