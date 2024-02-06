@@ -29,7 +29,6 @@ int main(){
 			cout << "Suma liczb zmiennoprzecinkowych: " <<Suma(c,d) <<endl;
 			break;
 		
-	
 	}
 	return 0;
 		
