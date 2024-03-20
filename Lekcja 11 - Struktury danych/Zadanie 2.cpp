@@ -1,21 +1,15 @@
 #include <iostream>
-
 using namespace std;
 
-struct kot{
+struct ksiazki{
 	string tytul;
 	string autor;
 	int rok;
 	string wydawnictwo;
 	float cena;
-};
+}
 
-//void szukanieRok (rok){
-	
-//}
-
-int main(){
-	kot Ksiegarnia [7]{
+ksiazki [7]={
 		{ "Tytul1", "autor1", 1925, "Helion1", 23.54 },
     	{ "Tytul2", "autor2", 1926, "Helion2", 24.54 },
     	{ "Tytul3", "autor1", 1927, "Helion3", 25.54 },
@@ -23,42 +17,68 @@ int main(){
     	{ "Tytul5", "autor1", 1921, "Helion2", 27.54 },
     	{ "Tytul6", "autor2", 1930, "Helion3", 28.54 },
     	{ "Tytul7", "autor1", 1931, "Helion1", 29.54 },
-	};
+};
 	
-	cout << "\tWitaj w ksiegarnii" << endl;;
-	//cout << "1. Rok wydania" << ;
-	//cout << "2. Cena" << ;
-	//cout << "3. Wydawnictwo" << ;
-	//cout << "0. Wyjscie" << ;
+int main(){
+	short wrok;
+	float wcena;
+	string wwydawnictwo;
 	
-	
-	cout << "\tPo jakiej kategorii chcial bys wyszukac ksiazke: " << endl;
-		for (int nwm=0; nwm < 7; nwm++){
-			cout << "1. Rok wydania" << Ksiegarnia[nwm].rok;
-			cout << "2. Cena" << Ksiegarnia[nwm].cena;
-			cout << "3. Wydawnictwo" <<  Ksiegarnia[nwm].wydawnictwo;
-		//	cout << "0. Wyjscie" << Ksiegarnia[nwm].;
 	int wybor;
+	
+	cout << "Witaj w ksiegarnii" << endl;
+	cout << "Po jakiej kategorii chcial bys wyszukac ksiazke: " << endl;
+	cout << "1. Rok wydania" << endl;
+	cout << "2. Cena" << endl;
+	cout << "3. Wydawnictwo" << endl;
+	cout << "0. Wyjscie" << endl;
+	cin >> wybor;
+	
 	switch (wybor){
 		case 1:
-			cout << "\t1. Rok wydania";
-			cin >> Ksiegarnia[nwm].rok;
+			cout << "Podaj od jakiego roku chcesz zobaczyc ksiazki: ";
+			cin >> wrok;
+			for(int a=0; a<7; a++){
+				if (ksiazki[a].rok >= wrok){
+					cout << ksiazki[a].tytul << "   "; 
+	                cout << ksiazki[a].autor << "   "; 
+                	cout << ksiazki[a].rok << "   " ;
+                	cout << ksiazki[a].wydawnictwo << "   " ;
+                	cout << ksiazki[a].cena << "   " << endl;
+				}
+			}
 			break;
 		case 2:
-			cout << "\t2. Cena";
-			cin >> Ksiegarnia[nwm].cena;    
+			cout << "Podaj od jakiej ceny chcesz zobaczyc ksiazki: ";
+			cin >> wcena;
+			for(int a=0;a<7;a++){
+				if (ksiazki[a].cena >= wcena){
+					cout << ksiazki[a].tytul << "   "; 
+	                cout << ksiazki[a].autor << "   "; 
+                	cout << ksiazki[a].rok << "   "; 
+                	cout << ksiazki[a].wydawnictwo << "   "; 
+                	cout << ksiazki[a].cena << "   " << endl;
+				}
+			}
 			break;
 		case 3:
-			cout << "\t3. Wydawnictwo";
-			cin >> Ksiegarnia[nwm].wydawnictwo;
+			cout << "Podaj od jakiego wydawnictwa chcesz zobaczyc ksiazki: ";
+			cin >> wwydawnictwo;
+			for(int a=0; a<7; a++){ 
+            	if (ksiazki[a].wydawnictwo == wwydawnictwo){ 
+                cout << ksiazki[a].tytul << "   "; 
+                cout << ksiazki[a].autor << "   "; 
+                cout << ksiazki[a].rok << "   "; 
+                cout << ksiazki[a].wydawnictwo << "   "; 
+                cout << ksiazki[a].cena << "  " << endl; 
+            	}  
+        	} 
 			break;
-		//case 0:
-		//	cout << "0. Wyjscie";
-		//	cin >>
+			
+		case 0:
+			cout << "Zla odpowiedz";
+			break;
 		}
-	}
 	
-	
-	cin.get();
-	return 0;
+
 }
