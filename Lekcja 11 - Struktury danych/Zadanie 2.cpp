@@ -18,6 +18,8 @@ ksiazki [7]={
     	{ "Tytul6", "autor2", 1930, "Helion3", 28.54 },
     	{ "Tytul7", "autor1", 1931, "Helion1", 29.54 },
 };
+
+
 	
 int main(){
 	short wrok;
@@ -34,6 +36,59 @@ int main(){
 	cout << "0. Wyjscie" << endl;
 	cin >> wybor;
 	
+//	switch (wybor){
+//		case 1:
+//			cout << "Podaj od jakiego roku chcesz zobaczyc ksiazki: ";
+//			cin >> wrok;
+//			for(int a=0; a<7; a++){
+//				if (ksiazki[a].rok >= wrok){
+//				cout << ksiazki[a].tytul << "   "; 
+//	                cout << ksiazki[a].autor << "   "; 
+//                	cout << ksiazki[a].rok << "   " ;
+//                	cout << ksiazki[a].wydawnictwo << "   " ;
+//                	cout << ksiazki[a].cena << "   " << endl;
+//				}
+//			}
+//			break;
+//		case 2:
+//			cout << "Podaj od jakiej ceny chcesz zobaczyc ksiazki: ";
+//			cin >> wcena;
+//			for(int a=0;a<7;a++){
+//				if (ksiazki[a].cena >= wcena){
+//					cout << ksiazki[a].tytul << "   "; 
+//	                cout << ksiazki[a].autor << "   "; 
+//                	cout << ksiazki[a].rok << "   "; 
+//                	cout << ksiazki[a].wydawnictwo << "   "; 
+//                	cout << ksiazki[a].cena << "   " << endl;
+//				}
+//			}
+//			break;
+//		case 3:
+//			cout << "Podaj od jakiego wydawnictwa chcesz zobaczyc ksiazki: ";
+//			cin >> wwydawnictwo;
+//			for(int a=0; a<7; a++){ 
+//            	if (ksiazki[a].wydawnictwo == wwydawnictwo){ 
+//                cout << ksiazki[a].tytul << "   "; 
+//                cout << ksiazki[a].autor << "   "; 
+//                cout << ksiazki[a].rok << "   "; 
+//                cout << ksiazki[a].wydawnictwo << "   "; 
+//                cout << ksiazki[a].cena << "  " << endl; 
+//            	}  
+//        	} 
+//			break;
+//			
+//		case 0:
+//			cout << "Zla odpowiedz";
+//			break;
+//		}
+	
+void funkcja(short wrok, float wcena, string wwydawnictwo){
+//	short wrok;
+//	float wcena;
+//	string wwydawnictwo;
+		
+	int wybor;
+		
 	switch (wybor){
 		case 1:
 			cout << "Podaj od jakiego roku chcesz zobaczyc ksiazki: ";
@@ -79,6 +134,9 @@ int main(){
 			cout << "Zla odpowiedz";
 			break;
 		}
+	return;
 	
-
+	}
 }
+
+
